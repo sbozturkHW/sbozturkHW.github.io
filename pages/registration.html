@@ -1,43 +1,76 @@
-<!DOCTYPE html5>
-<html5>
+<!DOCTYPE html>
 
-<div class="topnav" id="myTopnav">
-    <a href="../index.html">Home</a>
-    <a href="hometown.html">Hometown</a>
-    <a href="family.html">Family</a>
-    <a href="hobies.html">Hobies</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="registration.html">Registration</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-</div>
-    <head>
-        <title>Registration Form</title>
-    </head>
+<head>
 
-    <body>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Registration Form</title>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="hometown.html">Hometown</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="hobies.html">Hobies</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="active"><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<br><br>
+
+
+<div class="container">
     <h1>Registration Form</h1>
-    <form action="/action_page.php">
+    <form id="contactform">
+        <p class="contact"><label for="name">Name</label></p>
+        <input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text">
+
+        <p class="contact"><label for="email">Email</label></p>
+        <input id="email" name="email" placeholder="example@domain.com" required="" type="email">
+
+        <p class="contact"><label for="username">Create a username</label></p>
+        <input id="username" name="username" placeholder="Username" required="" tabindex="2" type="text">
+
+        <p class="contact"><label for="password">Create a password</label></p>
+        <input type="password" id="password" name="password" placeholder="Password" required="">
+        <p class="contact"><label for="repassword">Confirm your password</label></p>
+        <input type="password" id="repassword" name="repassword" placeholder="Confirm Password" required=""> <br><br>
 
 
-        First name:<br>
-        <input type="text" name="firstname" required><br><br>
-
-        Last name:<br>
-        <input type="text" name="lastname" required><br><br>
-
-        E-mail:<br>
-        <input type="email" name="email" required><br><br>
-
-        User name:<br>
-        <input type="text" name="userid" required><br><br>
-
-        User password:<br>
-        <input type="password" name="psw" required><br><br>
-
-        City:<br>
-        <select name="city">
-            <option value=""></option>
+        <label>City</label>
+        <select class="select-style" name="City">
+            <option value=0"></option>
             <option value="1">Adana</option>
             <option value="2">Adıyaman</option>
             <option value="3">Afyonkarahisar</option>
@@ -119,30 +152,59 @@
             <option value="77">Yalova</option>
             <option value="66">Yozgat</option>
             <option value="67">Zonguldak</option>
+        </select> <br><br>
+
+
+        <label>Birthday</label><br>
+        <label class="month">
+            <label>Day: <input class="birthday" maxlength="2" name="BirthDay" placeholder="Day" required=""></label>
+            <label>Moth: <select class="select-style" name="BirthMonth">
+                <option value=""></option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            </label>
+
+            <label>Year: <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label></label>
+        <br><br>
+
+        <label>Gender </label>
+        <select class="select-style gender" name="gender">
+            <option value="select"></option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
         </select><br><br>
 
-        Gender:<br>
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br><br>
 
-        Birthday:<br>
-        <input type="date" name="bday"><br><br>
-
-        Select image to upload:<br>
+        <p class="image"><label for="fileToUpload">Select image to upload:</label></p>
         <input type="file" name="fileToUpload" id="fileToUpload"><br>
-        <input type="submit" value="Upload Image" name="submit"><br><br>
+        <input type="submit" value="Upload Image" name="submit"></label><br><br>
 
-        Interests:<br>
-        <input type="checkbox" name="mobile" value="Mobile">Mobile Programming <br>
-        <input type="checkbox" name="game" value="Game">Game Programming<br>
-        <input type="checkbox" name="web" value="Web">Web Programming<br>
-        <input type="checkbox" name="design" value="Design">UI/UX <br><br>
 
-        About Me:<br>
-        <textarea rows="5" cols="50"></textarea><br><br>
+        <label>Interests:<br>
+            <input type="checkbox" name="mobile" value="Mobile">Mobile Programming <br>
+            <input type="checkbox" name="game" value="Game">Game Programming<br>
+            <input type="checkbox" name="web" value="Web">Web Programming<br>
+            <input type="checkbox" name="design" value="Design">UI/UX </label><br><br>
 
-        <input type="submit" onclick="return alert('Thanks for registration')">
+        <label>About Me:<br>
+            <textarea rows="5" cols="50"></textarea></label><br><br>
+
+
+        <input type="submit" class="btn btn-primary" onclick="return alert('Thanks for registration')">
+
     </form>
+</div>
 
-    </body>
-</html5>
+
+</body>
