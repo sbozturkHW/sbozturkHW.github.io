@@ -12,7 +12,7 @@
 
     <style>
         div.container {
-            color: white;
+            color: black;
         }
 
         div.navigation {
@@ -58,26 +58,74 @@
 </div>
 
 <div class="container">
-    <h1>Registration Form</h1>
-    <form id="contactform">
-        <p class="contact"><label for="name">Name</label></p>
-        <input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text">
 
-        <p class="contact"><label for="email">Email</label></p>
-        <input id="email" name="email" placeholder="example@domain.com" required="" type="email">
-
-        <p class="contact"><label for="username">Create a username</label></p>
-        <input id="username" name="username" placeholder="Username" required="" tabindex="2" type="text">
-
-        <p class="contact"><label for="password">Create a password</label></p>
-        <input type="password" id="password" name="password" placeholder="Password" required="">
-        <p class="contact"><label for="repassword">Confirm your password</label></p>
-        <input type="password" id="repassword" name="repassword" placeholder="Confirm Password" required=""> <br><br>
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
 
 
-        <label>City</label>
-        <select class="select-style" name="City">
-            <option value=0"></option>
+<legend>Registration Page</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First&Last Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Username</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="username" placeholder="Username" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Password</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+  <input name="password" placeholder="Password" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Confirm Password</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+  <input name="confirm password" placeholder="Password" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <select name="city" class="form-control selectpicker" >
+            <option value=" " >Please select your city</option>
             <option value="1">Adana</option>
             <option value="2">Adıyaman</option>
             <option value="3">Afyonkarahisar</option>
@@ -159,59 +207,87 @@
             <option value="77">Yalova</option>
             <option value="66">Yozgat</option>
             <option value="67">Zonguldak</option>
-        </select> <br><br>
+  </select>
+    </div>
+  </div>
+</div>
 
 
-        <label>Birthday</label><br>
-        <label class="month">
-            <label>Day: <input class="birthday" maxlength="2" name="BirthDay" placeholder="Day" required=""></label>
-            <label>Moth: <select class="select-style" name="BirthMonth">
-                <option value=""></option>
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-            </label>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Birthday</label>  
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth">
+    </div>
+  </div>
+</div>
 
-            <label>Year: <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label></label>
-        <br><br>
-
-        <label>Gender </label>
-        <select class="select-style gender" name="gender">
-            <option value="select"></option>
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Gender</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="gender" class="form-control selectpicker" >
+      <option value=" ">Please select your gender></option>
             <option value="m">Male</option>
             <option value="f">Female</option>
-        </select><br><br>
-
-
-        <p class="image"><label for="fileToUpload">Select image to upload:</label></p>
-        <input type="file" name="fileToUpload" id="fileToUpload"><br>
-        <input type="submit" value="Upload Image" name="submit"></label><br><br>
-
-
-        <label>Interests:<br>
-            <input type="checkbox" name="mobile" value="Mobile">Mobile Programming <br>
-            <input type="checkbox" name="game" value="Game">Game Programming<br>
-            <input type="checkbox" name="web" value="Web">Web Programming<br>
-            <input type="checkbox" name="design" value="Design">UI/UX </label><br><br>
-
-        <label>About Me:<br>
-            <textarea rows="5" cols="50"></textarea></label><br><br>
-
-
-        <input type="submit" class="btn btn-primary" onclick="return alert('Thanks for registration')">
-
-    </form>
+    </select>
+  </div>
 </div>
+</div>
+
+
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Interests</label>
+                        <div class="col-md-4">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="mobile" value="Mobile">Mobile Programming
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="game" value="Game">Game Programming
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="web" value="Web">Web Programming
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="design" value="Design">UI/UX
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">About Me</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send" onclick="return alert('Thanks for registration')"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div>
 
 
 </body>
